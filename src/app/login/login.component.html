@@ -1,10 +1,19 @@
 <ActionBar title="Groceries"></ActionBar>
 
-<StackLayout>
-  <TextField hint="Email Address" keyboardType="email"
-    autocorrect="false" autocapitalizationType="none"></TextField>
-  <TextField hint="Password" secure="true"></TextField>
+<FlexboxLayout>
+  <StackLayout class="form">
+    <Image src="https://www.nativescript.org/images/default-source/landingpages/logo.png"></Image>
 
-  <Button text="Sign in"></Button>
-  <Button text="Sign up for Groceries"></Button>
-</StackLayout>
+  <TextField hint="Email Address" keyboardType="email"
+  autocorrect="false" autocapitalizationType="none"
+  [(ngModel)]="user.email" class="input input-border"></TextField>
+  
+<TextField hint="Password" secure="true"
+  [(ngModel)]="user.password" class="input input-border"></TextField>
+
+    <Button [text]="isLoggingIn ? 'Sign in' : 'Sign up'"
+  class="btn btn-primary" (tap)="submit()"></Button>
+<Button [text]="isLoggingIn ? 'Sign up' : 'Back to login'"
+  (tap)="toggleDisplay()"></Button>
+  </StackLayout>
+</FlexboxLayout>

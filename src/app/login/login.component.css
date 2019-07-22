@@ -1,0 +1,28 @@
+FlexboxLayout {
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-image: url("https://images.pexels.com/photos/1227520/pexels-photo-1227520.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  }
+  StackLayout {
+    width: 300;
+    padding: 10 16;
+    background-color: #f0f0f0;
+  }
+
+  Image {
+    margin-bottom: 20;
+    height: 70;
+  }
+  Button, TextField {
+    margin-bottom: 10;
+  }
+  .btn-primary {
+    background-color: #CB1D00;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  TextField {
+    
+    color: black;
+  }
